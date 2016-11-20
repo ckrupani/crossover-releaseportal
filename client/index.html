@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <base href="/"></base>
+
+        <title>Release Portal</title>
+    </head>
+    <body>
+
+        <!-- Root View of the Application -->
+        <ui-view></ui-view>
+
+        <!-- Third party and application dependencies -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/4.2.4/highcharts.js"></script>
+        <script src="jspm_packages/system.js"></script>
+        <script src="config.js"></script>
+        <script type="text/javascript">
+            System.import('jquery')
+            .then(function () {
+                return System.import('angular');
+            })
+            .then(function () {
+                return System.import('bootstrap');
+            })
+            .then(function () {
+                return System.import('bootstrap/css/bootstrap.css!');
+            })
+            .then(function () {
+                return System.import('modules/application/bootstrap');
+            });
+        </script>
+        <!-- <script type="text/javascript" src="reload-client.js"></script> -->
+    </body>
+</html>
